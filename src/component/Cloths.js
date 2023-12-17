@@ -5,6 +5,7 @@ import Shimmer from './Shimmer';
 import View from './View';
 
 
+
 const Cloths = () => {
     const[search, setSearch] = useState("")
     const[cloths, setCloths] = useState([])
@@ -46,10 +47,13 @@ const Cloths = () => {
 
        
     }
+    const back=()=>{
+        navigate(navigate-1)
+    }
 
    
 
-  return cloths.length===0?<Shimmer/>: data.length===0?<h2>No data is found</h2> :(
+  return cloths.length===0?<Shimmer/>: data.length===0?<h2>No data is found <br/> <button onClick={back}>back</button></h2>     :(
     <div className="main">
        {/* header start */}
        <div className="header">
